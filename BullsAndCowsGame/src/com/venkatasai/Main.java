@@ -8,11 +8,10 @@ public class Main {
         int flag = 0;
         Game game = new Game();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the secret code");
-        int SecretCode = scanner.nextInt();
-        game.setSecretCode(SecretCode);
+        game.RandomNumGen();
+        System.out.println("The number is prepared:****");
         while (flag != 1) {
-            System.out.println("Enter the User code");
+            System.out.println("guess the code:");
             int UserCode = scanner.nextInt();
             game.setUserCode(UserCode);
             game.numberSplit();

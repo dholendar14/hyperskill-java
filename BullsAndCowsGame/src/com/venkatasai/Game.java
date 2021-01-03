@@ -6,13 +6,13 @@ public class Game {
     int[] SecretCodeArray = new int[4];
     int[] UserCodeArray = new int[4];
 
-    public void setSecretCode(int SecretCode){
-        this.SecretCode = SecretCode;
+    public void RandomNumGen(){
+        SecretCode = (int)(Math.random()*9000)+1000;
     }
     public void setUserCode(int userCode) {
         this.userCode = userCode;
     }
-    int Number = SecretCode;
+
     public void numberSplit(){
         int i = 0;
         while(SecretCode != 0) {
@@ -44,7 +44,7 @@ public class Game {
         }
         if (bull == 4){
             System.out.println("Grade:" + bull + " bulls.");
-            System.out.println("Congrats! You Won");
+            System.out.println("Congrats! You Won.");
             return flag = 1;
         } else if (bull > 0 && bull <= 3 || cow > 0 && cow <= 3){
             System.out.println("Grade: " + bull + " bulls and " + cow + " cow." );
